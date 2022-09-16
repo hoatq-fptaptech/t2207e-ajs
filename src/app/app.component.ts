@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 't2207e-angular';
+  classRoom = "T2207EABC";
 }

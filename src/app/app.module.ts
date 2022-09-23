@@ -8,19 +8,23 @@ import {FormsModule} from "@angular/forms";
 import {HomeComponent} from "./pages/home/home.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {RouterModule, Routes} from "@angular/router";
+import {FoodComponent} from "./food/food.component";
+import {HttpClientModule} from "@angular/common/http";
 
 // khai bao cac page trong website
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'food', component: FoodComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent, StudentComponent,ClassroomComponent,
-    HomeComponent,LoginComponent
+    HomeComponent,LoginComponent,FoodComponent
   ],
   imports: [
-    BrowserModule, FormsModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
